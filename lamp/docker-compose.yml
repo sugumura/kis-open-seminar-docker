@@ -8,7 +8,7 @@ services:
     ports:
       - 8000:80
     volumes:
-      - .:/var/www/html
+      - ./sample:/var/www/html
   # DBサービス
   db:
     image: mysql:8.0.17
