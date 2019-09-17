@@ -1,5 +1,14 @@
 version: '3.7'
 services:
+  # Webアプリ
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    ports:
+      - 8000:80
+    volumes:
+      - .:/var/www/html
   # DBサービス
   db:
     image: mysql:8.0.17
